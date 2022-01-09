@@ -13,35 +13,44 @@ $(document).ready(function () {
   // Current Day populating in header format
   currentDay.textContent = moment().format("dddd, MMMM Do");
 
-  function displayHour(hour) {
-    if (hour > 12) {
-      return hour - 12 + "PM";
-    } else if (hour === 12) {
+  function hourDisplay(time) {
+    if (time > 12) {
+      return time - 12 + "PM";
+    } else if (time === 12) {
       return "12PM";
     } else {
-      return hour + "AM";
+      return time + "AM";
     }
   }
-  console.log("hour f", displayHour());
+  console.log("time f", hourDisplay());
 
   // populate time blocks
-  function addRow(hour) {
+  function addRow(time) {
     let row = document.createElement("div");
     row.setAttribute("class", "row time-block");
-    row.setAttribute("id", `hour-${hour}`);
+    row.setAttribute("id", `time-${time}`);
 
     let div = document.createElement("div");
-    div.setAttribute("class", "col-md-1 hour");
-    div.setAttribute("id", `hour-${hour}-label`);
-    div.textContent = displayHour(hour);;
+    div.setAttribute("class", "col-md-1 time");
+    div.setAttribute("id", `time-${time}-label`);
+    div.textContent = hourDisplay(time);;
 
     let text = document.createElement("textarea");
     text.setAttribute("class", "col-md-10 description past");
-    text.setAttribute("id", `text-${hour}`);
-    if (localStorage.getItem(hour)){
-        text.textContent = localStorage.getItem(hour)
+    text.setAttribute("id", `text-${time}`);
+    if (localStorage.getItem(time)){
+        text.textContent = localStorage.getItem(time)
     }
 
+    if (time === currentHour) {
+      text.classList.remove("past")
+      text.classList.add("present");
+  } else if (time > currentHour) {
+      text.classList.remove("past", "present")
+      text.classList.add("future");
+  }
+
+  // add button
     // add functionality to change classes for past / present / future
 
     // let icon = document.createElement("i");
