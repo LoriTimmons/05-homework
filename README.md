@@ -23,5 +23,6 @@ This application is a simple calendar application that allows the user to save e
   #### Contact Me @: lorietimmons@gmail.com<br>
   #### GitHub Profile: LoriTimmons
   #### GitHub Repo Link: https://github.com/LoriTimmons/05-homework
+  #### Deployed Application: https://loritimmons.github.io/05-homework/
 
 
