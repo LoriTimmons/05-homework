@@ -1,57 +1,27 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# 05 Third-Party APIs: Work Day Scheduler - Lori Timmons 
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Table of Contents 
+* [Description](#Description)  <br>
+* [Installation](#Installation)<br>
+* [Usage](#Usage)<br>
+* [Questions / Issues](#Questions)<br>
 
-The starter code uses the [Moment.js](https://momentjs.com/) library to work with date and time, but feel free to use a different JavaScript solution to handle this functionality since Moment.js is considered a "legacy" project. Learn more about these other solutions in the [Moment.js project status page.](https://momentjs.com/docs/#/-project-status/)
+  ## Description
+This application is a simple calendar application that allows the user to save events for each hour of the day. This includes dynamically updated HTML and CSS. <br> Time blocks will change to different color based off when an item is scheduled. Past(white), present(red) and future(green). <br> When texted is entered in the text area it will save to local storage and remain on the page though a refresh. 
+ 
 
-## User Story
+  ## Installation
+  This project uses jQuery, CSS, JS, and [Moment.js](https://momentjs.com/) library to work with date and time. 
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+  ## Usage
+  Use this application to keep yourself organized and on schedule for your work day. 
+  <br>
+  ![VS Image 1](./assets/images/05-SS1.png) 
+  ![VS Image 2](./assets/images/05-SS2.png) 
 
-## Acceptance Criteria
-
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## Questions
+  #### Contact Me @: lorietimmons@gmail.com<br>
+  #### GitHub Profile: LoriTimmons
+  #### GitHub Repo Link: https://github.com/LoriTimmons/05-homework
 
 
-Class notes 
- 1. Display today's date 
- 2. A single row for a task (hour,label, input box, button)
- 3. Repeat this for 9-5pm (JavaScript?)
- 4. Color code the different cells
- 5. Make saveable  
- 6. LOOK AT CSS first
- 7. Saving stuff to local storage
- 8. Look in homework for the rows. 

@@ -56,7 +56,7 @@ $(document).ready(function () {
   saveBtn.setAttribute('id', `btn-${time}`);
   saveBtn.addEventListener('click', ()=>{
   const schedule = document.querySelector(`#text-${time}`).value;
-  console.log(schedule);
+  console.log("Schedule" ,schedule);
   localStorage.setItem(time, schedule);
   })
 
