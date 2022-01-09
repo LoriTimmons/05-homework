@@ -35,11 +35,11 @@ $(document).ready(function () {
     div.setAttribute("id", `hour-${hour}-label`);
     div.textContent = displayHour(hour);;
 
-    let textField = document.createElement("textarea");
-    textField.setAttribute("class", "col-md-10 description past");
-    textField.setAttribute("id", `textarea-${hour}`);
+    let text = document.createElement("textarea");
+    text.setAttribute("class", "col-md-10 description past");
+    text.setAttribute("id", `text-${hour}`);
     if (localStorage.getItem(hour)){
-        textField.textContent = localStorage.getItem(hour)
+        text.textContent = localStorage.getItem(hour)
     }
 
     // add functionality to change classes for past / present / future
@@ -50,7 +50,7 @@ $(document).ready(function () {
     body.appendChild(row);
 
     row.appendChild(div);
-    row.appendChild(textFiled);
+    row.appendChild(text);
     // row.appendChild(saveBtn);
     // saveBtn.appendChild(icon);
   }
