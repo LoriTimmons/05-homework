@@ -45,17 +45,17 @@ textarea{
 /* use later for color change in JS */
 .past {
   background-color: white;
-  color: white;
+  color: black;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {

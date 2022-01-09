@@ -51,17 +51,24 @@ $(document).ready(function () {
   }
 
   // add button
-    // add functionality to change classes for past / present / future
+  let saveBtn = document.createElement("button");
+  saveBtn.setAttribute("class", "saveBtn btn col-md-1");
+  saveBtn.setAttribute('id', `btn-${time}`);
+  saveBtn.addEventListener('click', ()=>{
+  const schedule = document.querySelector(`#text-${time}`).value;
+  console.log(schedule);
+  localStorage.setItem(time, schedule);
+  })
 
-    // let icon = document.createElement("i");
-    // icon.setAttribute("class", "fas fa-save");
+    let icon = document.createElement("i");
+    icon.setAttribute("class", "fas fa-save");
 
     body.appendChild(row);
 
     row.appendChild(div);
     row.appendChild(text);
-    // row.appendChild(saveBtn);
-    // saveBtn.appendChild(icon);
+    row.appendChild(saveBtn);
+    saveBtn.appendChild(icon);
   }
   for (let i = 0; i < hoursBlocks.length; i++) {
     addRow(hoursBlocks[i]);
